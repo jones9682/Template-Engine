@@ -52,6 +52,10 @@ test/          // jest tests
 app.js         // Runs the application
 ```
 
+## Test Suite: Pass
+
+![Test Pass Capture](./Assets/TestSuitePass.jpg)
+
 ### Hints
 
 * Create multiple HTML templates for each type of user. For example, you could use the following templates:
