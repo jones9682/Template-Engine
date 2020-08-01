@@ -23,7 +23,7 @@ function write() {
     })
 }
 
-//
+// This function prompts user to choose a team member
 function createTeam() {
     return inquirer.prompt([
         {
@@ -53,6 +53,8 @@ function createTeam() {
                 break;
         }
     })
+
+    // This function prompts user with questions about manager
     function addManager() {
         inquirer.prompt([
             {
@@ -76,6 +78,8 @@ function createTeam() {
                 message: "What is your manager's office number?"
             },
         ])
+
+            // This takes user manager data and pushes to team members then creates team 
             .then(userChoice => {
                 const manager = new Manager(userChoice.name, userChoice.id, userChoice.email, userChoice.officeNumber)
                 teamMembers.push(manager)
@@ -83,6 +87,8 @@ function createTeam() {
                 createTeam();
             })
     }
+
+    // This function prompts user with questions about engineer
     function addEngineer() {
         inquirer.prompt([
             {
@@ -106,6 +112,8 @@ function createTeam() {
                 message: "What is your engineer's GitHub username?"
             },
         ])
+
+            // This takes user engineer data and pushes to team members then creates team
             .then(userChoice => {
                 const engineer = new Engineer(userChoice.name, userChoice.id, userChoice.email, userChoice.gitHub)
                 teamMembers.push(engineer)
@@ -113,6 +121,8 @@ function createTeam() {
                 createTeam();
             })
     }
+
+    // This function prompts user with questions about intern
     function addIntern() {
         inquirer.prompt([
             {
@@ -136,6 +146,8 @@ function createTeam() {
                 message: "What is your intern's school?"
             },
         ])
+
+            // This takes user intern data and pushes to team members then creates team
             .then(userChoice => {
                 const intern = new Intern(userChoice.name, userChoice.id, userChoice.email, userChoice.school)
                 teamMembers.push(intern)
