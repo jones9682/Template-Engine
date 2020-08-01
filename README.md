@@ -21,7 +21,7 @@ How do you deliver this? Here are some guidelines:
 
 * Below is an example of what your application may look like. Remember, the styling is completely up to you so try to make it unique.
 
-![Employee Summary 1](./Assets/myteam.jpeg)
+![Employee Summary 1](./Assets/myteam.jpg)
 
 In the `Develop` folder, there is a `package.json`, so make sure to `npm install`.
 
