@@ -19,7 +19,11 @@ How do you deliver this? Here are some guidelines:
 
 * Your app will run as a Node CLI to gather information about each employee.
 
-* Below is an example of what your application may look like. Remember, the styling is completely up to you so try to make it unique.
+## Demo
+
+![Demo](./Assets/TemplateEngineDemo.gif)
+
+* Below is a sample of what the application looks like when generated.
 
 ![Employee Summary 1](./Assets/myteam.jpg)
 
