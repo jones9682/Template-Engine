@@ -17,83 +17,143 @@ const { type } = require("os");
 // and to create objects for each team member (using the correct classes as blueprints!)
 const teamMembers = []
 
-const managerQ = [
-    {
-        type: "input",
-        name: "name",
-        message: "What is your manager's name?"
-    },
-    {
-        type: "input",
-        name: "id",
-        message: "What is your manager's id?"
-    },
-    {
-        type: "input",
-        name: "email",
-        message: "What is your manager's email?"
-    },
-    {
-        type: "input",
-        name: "officeNumber",
-        message: "What is your manager's office number?"
-    },
-    {
-        type: "list",
-        name: "teamChoice",
-        Choices =[
-            'Engineer',
-            'Intern',
-            'I do not want to add more team members'
-        ]
+function createTeam() {
+    inquirer.prompt([
+        {
+            type: "list",
+            name: "teamChoice",
+            message: "Would you like to add a team member",
+            choices: [
+                "Manager",
+                'Engineer',
+                'Intern',
+                'I do not want to add more team members'
+            ]
+        }
+
+    ]).then(userChoice => {
+        switch (userChoice.teamChoice) {
+            case "Manager":
+                addManager();
+                break;
+
+            case "Engineer":
+                addEngineer();
+                break;
+
+            case "Intern":
+                addIntern();
+                break;
+
+            case "No more team members":
+                render(teamMembers);
+                break
+        }
+    })
+
+    function addManager() {
+        inquirer.prompt([
+            {
+                type: "input",
+                name: "name",
+                message: "What is your manager's name?"
+            },
+            {
+                type: "input",
+                name: "id",
+                message: "What is your manager's id?"
+            },
+            {
+                type: "input",
+                name: "email",
+                message: "What is your manager's email?"
+            },
+            {
+                type: "input",
+                name: "officeNumber",
+                message: "What is your manager's office number?"
+            },
+        ])
+            .then(userChoice => {
+                const manager = new Manager(userChoice.name, userChoice.id, userChoice.email, userChoice.officeNumber)
+                teamMembers.push(manager)
+                console.log(teamMembers);
+                createTeam();
+            })
     }
-];
+}
 
-const engineerQ = [
-    {
-        type: "input",
-        name: "name",
-        message: "What is your engineer's name?"
-    },
-    {
-        type: "input",
-        name: "id",
-        message: "What is your engineer's id?"
-    },
-    {
-        type: "input",
-        name: "email",
-        message: "What is your engineer's email?"
-    },
-    {
-        type: "input",
-        name: "gitHub",
-        message: "What is your engineer's GitHub username?"
-    },
-];
 
-const internQ = [
-    {
-        type: "input",
-        name: "name",
-        message: "What is your intern's name?"
-    },
-    {
-        type: "input",
-        name: "id",
-        message: "What is your intern's id?"
-    },
-    {
-        type: "input",
-        name: "email",
-        message: "What is your intern's email?"
-    },
-    {
-        type: "input",
-        name: "school",
-        message: "What is your intern's school?"
-    },
-];
+function addEngineer() {
+    inquirer.prompt([
+        {
+            type: "input",
+            name: "name",
+            message: "What is your engineer's name?"
+        },
+        {
+            type: "input",
+            name: "id",
+            message: "What is your engineer's id?"
+        },
+        {
+            type: "input",
+            name: "email",
+            message: "What is your engineer's email?"
+        },
+        {
+            type: "input",
+            name: "gitHub",
+            message: "What is your engineer's GitHub username?"
+        },
+    ])
+        .then(userChoice => {
+            const engineer = new Engineer(userChoice.name, userChoice.id, userChoice.email, userChoice.gitHub)
+            teamMembers.push(engineer)
+            console.log(teamMembers);
+            createTeam();
+        })
+}
+
+function addIntern() {
+    inquirer.prompt([
+        {
+            type: "input",
+            name: "name",
+            message: "What is your intern's name?"
+        },
+        {
+            type: "input",
+            name: "id",
+            message: "What is your intern's id?"
+        },
+        {
+            type: "input",
+            name: "email",
+            message: "What is your intern's email?"
+        },
+        {
+            type: "input",
+            name: "school",
+            message: "What is your intern's school?"
+        },
+    ])
+        .then(userChoice => {
+            const intern = new Intern(userChoice.name, userChoice.id, userChoice.email, userChoice.school)
+            teamMembers.push(intern)
+            console.log(teamMembers);
+            createTeam();
+        })
+}
+
+module.exports = teamMembers
+
+createTeam();
+
+
+
+// function to build team members
+
 
 
 // After the user has input all employees desired, call the `render` function (required
