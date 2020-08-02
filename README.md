@@ -38,7 +38,7 @@ The application will prompt the user for information about the team manager and 
 
 ## License
 
-[![License](http://img.shields.io/:license-MIT-blue.svg)](http://doge.mit-license.org)
+[![License](http://img.shields.io/:license-MIT-blue.svg)](./LICENSE)
 
 ## Contributors
 ``
