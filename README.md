@@ -26,15 +26,15 @@ The application will prompt the user for information about the team manager and 
 
 ## Demo
 
-![Demo](./Assets/TemplateEngineDemo.gif)
+![Demo](../Assets/TemplateEngineDemo.gif)
 
 * Below is a sample of what the application looks like when generated.
 
-![Employee Summary 1](./Assets/myteam.jpg)
+![Employee Summary 1](../Assets/myteam.jpg)
 
 ## Test Suite: Pass
 
-![Test Pass Capture](./Assets/TestSuitePass.jpg)
+![Test Pass Capture](../Assets/TestSuitePass.jpg)
 
 ## License
 
