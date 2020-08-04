@@ -1,13 +1,14 @@
 
 body {
     width: 100%;    
-    /* background-image: url(/Assets/lightAbstract.jpg); */
-    background-color: rgb(196, 196, 196);
+    background-image: url(../Assets/lightAbstract.jpg);
+    /* background-color: rgb(196, 196, 196); */
     background-repeat: round;
     background-size: auto;
+    background-repeat: no-repeat;
 }
 .jumbotron {
-    background-color:  #005892ea;
+    background-color:  #ffcb6bea;
     color: #ffffff;
     font-weight: 800!important;
     padding: 1rem;
