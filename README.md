@@ -26,7 +26,7 @@ The application will prompt the user for information about the team manager and 
 
 ## Demo
 
-![Demo](../Assets/TemplateEngineDemo.gif)
+![Demo](../Assets/lightAbstract.jpg)
 
 * Below is a sample of what the application looks like when generated.
 
