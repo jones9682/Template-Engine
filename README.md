@@ -1,7 +1,7 @@
 
 [![License](http://img.shields.io/:MadeBy-BJonesJr-lightgreen?logo=gitHub)](https://github.com/jones9682/Template-Engine)
-[![License](https://img.shields.io/github/repo-size/jones9682/Good-README-Generator?logo=gitHub)](https://github.com/jones9682/Template-Engine)
-[![License](https://img.shields.io/github/languages/top/jones9682/Good-README-Generator?logo=github&logoColor=yellow)](https://github.com/jones9682/Template-Engine)
+[![License](https://img.shields.io/github/repo-size/jones9682/Template-Engine?logo=gitHub)](https://github.com/jones9682/Template-Engine)
+[![License](https://img.shields.io/github/languages/top/jones9682/Template-Engine?logo=github&logoColor=yellow)](https://github.com/jones9682/Template-Engine)
 
 # **Template Engine**
 
